@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>desafio-2-responsividade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            background-color: #02A28F;
+            padding: 10px 5%;
+
+        }
+
+        nav p {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-left: 100px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .imagem-container {
+            position: relative;
+            flex: 3;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .imagem-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .text-overlay p,
+        .text-overlay h1 {
+            margin: 5px 0;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            background-color: #1db195;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .popular-post {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .popular-post img {
+            width: 100px;
+            height: 70px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .popular-post .post-title {
+            font-weight: 600;
+        }
+
+        .popular-post .post-date {
+            font-size: 0.85rem;
+            color: #717171;
+        }
+
+        .categories {
+            list-style: none;
+            padding: 0;
+        }
+
+        .categories li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            color: #6f6e6e;
+        }
+
+        .categories span {
+            color: #7a7878;
+        }
+
+        .container-3 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .verde2 {
+            background-color: #02A28F;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .verde2 a {
+            color: #fff;
+            float: right;
+            font-size: 0.9rem;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .cards {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .cards img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-cards {
+            padding: 15px;
+        }
+
+        .text-cards p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .text-cards h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        #subliado {
+            color: #02A28F;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #02A28F;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 2560px) {
+            body {
+                max-width: 100%;
+                margin: auto;
+                background-color: #ffffff;
+                /* só um exemplo */
+
+            }
+
+            nav>p {
+                text-align: center;
+            }
+
+
+            .card {
+                grid-template-columns: repeat(3, 1fr);
+                /* exibe 3 cards por linha */
+            }
+
+            /* você pode colocar aqui qualquer classe do seu layout que precise "respirar" mais em telas muito grandes */
+        }
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .text-overlay h1 {
+                font-size: 1.2rem;
+            }
+
+            .text-overlay {
+                padding: 10px;
+            }
+
+            .popular-post img {
+                width: 80px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .verde2 {
+                font-size: 1rem;
+            }
+
+            .verde2 a {
+                float: none;
+                display: block;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p>The Dev News</p>
+    </nav>
+
+    <div class="container">
+        <div class="imagem-container">
+            <img src="./img/dnc deafio2.jpeg" alt="Imagem destaque">
+            <div class="text-overlay">
+                <p class="opiniao">Opinião</p>
+                <h1>Como é ser um desenvolvedor</h1>
+                <p class="autor">By Fabio Tetsuo</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="section-title">Posts populares</div>
+                <div class="popular-post">
+                    <img src="./img/mini-card.svg" alt="Post 1">
+                    <div>
+                        <p class="post-title">Desenvolvimento atual</p>
+                        <p class="post-date">22 Agosto 2022</p>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <img src="./img/mini-card2.svg" alt="Post 2">
+                    <div>
+                        <p class="post-title">GitLab vs GitHub</p>
+                        <p class="post-date">22 Agosto 2022</p>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <img src="./img/mini-card-3.svg" alt="Post 3">
+                    <div>
+                        <p class="post-title">Café atrapalha?</p>
+                        <p class="post-date">22 Agosto 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-title">Categorias</div>
+                <ul class="categories">
+                    <li>> saude <span>(1)</span></li>
+                    <li>> desenvolvimento <span>(2)</span></li>
+                    <li>> produtividade <span>(2)</span></li>
+                    <li>> opiniao <span>(1)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-3">
+
+        <div class="verde2">
+            <p>Posts mais recentes <a href=""> ver todos</a></p>
+
+        </div>
+
+        <!--cards-->
+        <div class="card">
+            <div class="cards">
+                <img src="./img/card-1.svg" alt="">
+                <div class="text-cards">
+                    <p id="subliado">desenvolvimento</p>
+                    <h3>Desenvolvimento mobile</h3>
+                    <div class="text-margin">
+                        <p> By Fabio Tetsuo</p>
+                        Lorem ipsum dolor sit amet consectetur.
+                        In vitae urna commodo amet congue integer dapibus.
+                        Interdum semper mauris convallis fusce enim odio.
+                        Vitae montes ridiculus felis.
+                        22 Agosto 2022 </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="cards">
+                <img src="./img/card-2.svg" alt="">
+                <div class="text-cards">
+                    <p id="subliado">Saude</p>
+                    <h3>Balancear vida profissional e pessoal</h3>
+                    <div class="text-margin">
+                        <p> By Ridho Satriawan </p>
+                        <p> Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor.
+                            22 Agosto 2022 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="./img/card-3.svg" alt="">
+                <div class="text-cards">
+                    <p id="subliado">desenvolvimento</p>
+                    <h3>Configurando VSCode</h3>
+                    <div class="text-margin">
+                        <p>
+                        <p>By Fabio Tetsuo</p>
+                        Lorem ipsum dolor sit amet consectetur.
+                        Erat interdum tortor ac sagittis id a etiam.
+                        Tellus vitae arcu dignissim massa aliquam vel tellus.
+                        Ipsum massa arcu nulla sed purus in ac. 22 Agosto 2022 </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="./img/card-4.svg" alt="">
+                <div class="text-cards">
+                    <p id="subliado">produtividade</p>
+                    <h3>2 monitores ou 1 ultrawide?</h3>
+                    <div class="text-margin">
+                        <p> By Fulano da Silva</p>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                        Arcu tellus adipiscing sagittis tristique.
+                        Eget molestie posuere enim pretium venenatis nunc ligula donec a.
+                        Velit senectus amet nulla.
+                        22 Agosto 2022 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>Copyright@The Dev News</p>
+    </footer>
+</body>
+
+</html>

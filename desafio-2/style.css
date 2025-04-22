@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+main {
+    height: 44px;
+    width: 100%x;
+    height: 70px;
+    background-color: #02A28F;
+}
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid: template columns 2fr;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700px;
+    color: #ffff;
+    margin-left: 156px;
+    padding: 10px;
+}
+
+.titulo-1 {
+    background-color: #02A28F;
+    max-width: 30%;
+    height: 70px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 900px;
+
+}
